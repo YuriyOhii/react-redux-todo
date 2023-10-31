@@ -7,7 +7,7 @@ export const Button = ({
   ...otherProps
 }) => {
   return (
-    <Btn type={type} {...otherProps}>
+    <Btn selected={selected} type={type} {...otherProps}>
       {children}
     </Btn>
   );

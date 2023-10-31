@@ -7,8 +7,8 @@ export const Btn = styled.button`
   border: none;
   font: inherit;
   cursor: pointer;
-  background-color: #e2e5e8;
-  color: inherit;
+  background-color: ${props => (props.selected ? '#1565c0' : '#e2e5e8')};
+  color: ${props => (props.selected ? 'white' : '#1565c0')};
   &:hover {
     background-color: #1976d2;
     color: #fff;
