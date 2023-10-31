@@ -1,4 +1,4 @@
-const { combineReducers } = require("redux");
+const { combineReducers } = require('redux');
 
 const tasksInitState = [
   { id: 0, text: 'Learn HTML and CSS', completed: true },
@@ -50,6 +50,6 @@ const filtersReducer = (state = filtersInitState, action) => {
 };
 
 export const rootReducer = combineReducers({
-   tasks: tasksReducer,
-   filters: filtersReducer, 
-})
+  tasks: tasksReducer,
+  filters: filtersReducer,
+});
