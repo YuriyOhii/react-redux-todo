@@ -1,4 +1,10 @@
-const { combineReducers } = require('redux');
+import { createReducer } from '@reduxjs/toolkit';
+import {
+  addTask,
+  deleteTask,
+  setFiltersStatus,
+  toggleCompleted,
+} from './actions';
 
 const tasksInitState = [
   { id: 0, text: 'Learn HTML and CSS', completed: true },
@@ -8,48 +14,28 @@ const tasksInitState = [
   { id: 4, text: 'Build amazing apps', completed: false },
 ];
 
-const tasksReducer = (state = tasksInitState, action) => {
-  switch (action.type) {
-    case 'tasks/addTask': {
-      return [...state, action.payload];
+export const tasksReducer = createReducer(tasksInitState, {
+  [addTask]: (state, action) => {
+    state.push(action.payload);
+  },
+  [deleteTask]: (state, action) => {
+    return state.filter(task => task.id !== action.payload);
+  },
+  [toggleCompleted]: (state, action) => {
+    for (const task of state) {
+      if (task.id === action.payload) {
+        task.completed = !task.completed;
+      }
     }
-
-    case 'tasks/deleteTask': {
-      return [...state.filter(task => task.id !== action.payload)];
-    }
-    case 'tasks/toggleCompleted': {
-      return [
-        ...state.map(task => {
-          if (task.id === action.payload)
-            return { ...task, completed: !task.completed };
-          return task;
-        }),
-      ];
-    }
-
-    default:
-      return state;
-  }
-};
+  },
+});
 
 const filtersInitState = {
   status: 'all',
 };
 
-const filtersReducer = (state = filtersInitState, action) => {
-  switch (action.type) {
-    case 'filters/setFiltersStatus': {
-      return {
-        ...state,
-        status: action.payload,
-      };
-    }
-    default:
-      return state;
-  }
-};
-
-export const rootReducer = combineReducers({
-  tasks: tasksReducer,
-  filters: filtersReducer,
+export const filtersReducer = createReducer(filtersInitState, {
+  [setFiltersStatus]: (state, action) => {
+    state.status = action.payload;
+  },
 });
