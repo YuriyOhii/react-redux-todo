@@ -7,7 +7,12 @@ const filtersInitState = {
 const filtersSlice = createSlice({
   name: 'filters',
   initialState: filtersInitState,
-  reducers: {},
+  reducers: {
+    setFilter(state, action) {
+      state.status = action.payload;
+    },
+  },
 });
 
 export const filtersReducer = filtersSlice.reducer;
+export const { setFilter } = filtersSlice.actions;
