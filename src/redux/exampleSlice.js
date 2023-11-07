@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchTasks } from './options';
+import { fetchTasks } from './operations';
 
 const initSlice = {
   items: [],
