@@ -7,5 +7,7 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  border: 1px solid #2f2f37;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #2f2f37;
+  }
 `;

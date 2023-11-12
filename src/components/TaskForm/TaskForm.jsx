@@ -1,7 +1,7 @@
 import { Button } from 'components/Button/Button';
 import { Field, Form } from './TaskForm.styled';
 import { useDispatch } from 'react-redux';
-import { addTask } from 'redux/actions';
+import { addTask } from 'redux/operations';
 
 export const TaskForm = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export const TaskForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={e => handleSubmit(e)}>
       <Field type="text" name="text" placeholder="Enter task text..." />
       <Button type="submit">Add task</Button>
     </Form>

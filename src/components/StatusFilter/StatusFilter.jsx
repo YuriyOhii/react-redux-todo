@@ -1,35 +1,32 @@
 import { Button } from 'components/Button/Button';
 import { Wrapper } from './StatusFilter.styled';
 import { STATUSFILTERS } from '../../redux/constants';
-import { getFilter } from 'redux/selectors';
+import { selectFilter } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFiltersStatus } from 'redux/actions';
+import { setFilter } from 'redux/filtersSlice';
 
 export const StatusFilter = () => {
-  const filter = useSelector(getFilter);
+  const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
-  const handleClick = data => {
-    dispatch(setFiltersStatus(data));
-  };
   return (
     <Wrapper>
       <Button
         type="button"
-        onClick={() => handleClick('all')}
+        onClick={() => dispatch(setFilter('all'))}
         selected={filter === STATUSFILTERS.all}
       >
         All
       </Button>
       <Button
         type="button"
-        onClick={() => handleClick('active')}
+        onClick={() => dispatch(setFilter('active'))}
         selected={filter === STATUSFILTERS.active}
       >
         Active
       </Button>
       <Button
         type="button"
-        onClick={() => handleClick('completed')}
+        onClick={() => dispatch(setFilter('completed'))}
         selected={filter === STATUSFILTERS.completed}
       >
         Completed
