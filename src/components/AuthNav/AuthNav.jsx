@@ -1,3 +1,10 @@
+import { List, NavigationLink } from './AuthNav.styled';
+
 export const AuthNav = () => {
-    return <div>AuthNav</div>;
-  };
+  return (
+    <List>
+      <NavigationLink to="/register">Register</NavigationLink>
+      <NavigationLink to="/login">LogIn</NavigationLink>
+    </List>
+  );
+};

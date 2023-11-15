@@ -15,4 +15,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul, ol, p {
+  margin: 0;
+  padding: 0;
+}
 `;
