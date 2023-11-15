@@ -1,5 +1,5 @@
 import { Text } from './TaskCounter.styled';
-import { selectTasksCount } from '../../redux/selectors';
+import { selectTasksCount } from '../../redux/tasks/selectors';
 import { useSelector } from 'react-redux';
 
 export const TaskCounter = () => {
