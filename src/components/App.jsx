@@ -1,5 +1,5 @@
 import { SharedLayout } from 'components/SharedLayout/SharedLayout';
-import { AppBar } from 'components/AppBar/AppBar';
+import { TaskBar } from 'components/AppBar/TaskBar';
 import { TaskForm } from 'components/TaskForm/TaskForm';
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
