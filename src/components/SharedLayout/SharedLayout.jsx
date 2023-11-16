@@ -8,13 +8,13 @@ import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 
 export const SharedLayout = ({ children }) => {
-  const isLoggedIn = useSelector(selectIsLoggedIn)
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <div>
       <header>
         <HeadContainer>
           <Navigation />
-          {isLoggedIn ? <UserMenu /> : <AuthNav />}              
+          {isLoggedIn ? <UserMenu /> : <AuthNav />}
         </HeadContainer>
       </header>
       <main>
