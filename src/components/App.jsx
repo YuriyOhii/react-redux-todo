@@ -1,6 +1,4 @@
 import { SharedLayout } from 'components/SharedLayout/SharedLayout';
-import { TaskBar } from 'components/AppBar/TaskBar';
-import { TaskForm } from 'components/TaskForm/TaskForm';
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';

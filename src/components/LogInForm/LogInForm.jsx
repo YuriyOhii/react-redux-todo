@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import { nanoid } from 'nanoid';
 import { Box, ErrCaption, Input } from './LogInForm.styled';
 import { useDispatch } from 'react-redux';
+import { logInUser } from 'redux/auth/operations';
 
 const initForm = {
   email: '',
@@ -17,7 +18,7 @@ const labelId = {
 export const LoginForm = () => {
   const dispatch = useDispatch();
   const handleSubmit = (values, { resetForm }) => {
-    console.log(values);
+    dispatch(logInUser(values));
     resetForm();
   };
   return (

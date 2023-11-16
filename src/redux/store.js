@@ -1,10 +1,11 @@
+import { authReducer } from './auth/authSlice';
 import { filtersReducer } from './filter/filtersSlice';
 import { tasksReducer } from './tasks/tasksSlice';
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 export const store = configureStore({
-reducer: {
+  reducer: {
     tasks: tasksReducer,
     filters: filtersReducer,
-}
+    auth: authReducer,
+  },
 });
-
