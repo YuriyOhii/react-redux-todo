@@ -1,8 +1,8 @@
 import { StatusFilter } from 'components/StatusFilter/StatusFilter';
 import { TaskCounter } from 'components/TaskCounter/TaskCounter';
-import { Section, Wrapper, Title } from './AppBar.styled';
+import { Section, Wrapper, Title } from './TaskBar.styled';
 
-export const AppBar = () => {
+export const TaskBar = () => {
   return (
     <Wrapper>
       <Section>
