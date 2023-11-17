@@ -7,7 +7,7 @@ export const NavigationLink = styled(NavLink)`
   color: black;
   text-decoration: none;
   transition: color 300ms;
-  &:active {
+  &.active {
     color: red;
   }
 `;
