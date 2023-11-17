@@ -1,3 +1,5 @@
+import { HomeImg } from 'components/HomeImg/HomeImg';
+
 export default function HomePage() {
-  return <div>HomePage</div>;
+  return <HomeImg />;
 }

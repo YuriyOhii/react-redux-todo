@@ -2,7 +2,7 @@ import { Button } from 'components/Button/Button';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
-import { Box, ErrCaption, Input } from './RegisterForm.styled';
+import { Box, ErrCaption, Input, Title } from './RegisterForm.styled';
 import { useDispatch } from 'react-redux';
 import { registerUser } from 'redux/auth/operations';
 
@@ -35,7 +35,7 @@ export const RegisterForm = () => {
   };
   return (
     <div>
-      <h1>Please, register!</h1>
+      <Title>Please, register!</Title>
       <Formik
         initialValues={initForm}
         onSubmit={handleSubmit}

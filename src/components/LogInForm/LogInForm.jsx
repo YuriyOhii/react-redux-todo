@@ -1,7 +1,7 @@
 import { Button } from 'components/Button/Button';
 import { Formik } from 'formik';
 import { nanoid } from 'nanoid';
-import { Box, ErrCaption, Input } from './LogInForm.styled';
+import { Box, ErrCaption, Input, Title } from './LogInForm.styled';
 import { useDispatch } from 'react-redux';
 import { logInUser } from 'redux/auth/operations';
 
@@ -23,7 +23,7 @@ export const LoginForm = () => {
   };
   return (
     <div>
-      <h1>Please, log in!</h1>
+      <Title style={{ textAlign: 'center' }}>Please, log in!</Title>
       <Formik initialValues={initForm} onSubmit={handleSubmit}>
         <Box>
           <label htmlFor={labelId.email}>Email</label>

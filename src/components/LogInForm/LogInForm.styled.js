@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 import { Form, ErrorMessage, Field } from 'formik';
 
+export const Title = styled.h1`
+  text-align: center;
+`;
+
 export const Box = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin: 0 auto;
 
   width: 320px;
   padding: 10px;
