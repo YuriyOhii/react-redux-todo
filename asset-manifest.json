@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-redux-todo/static/css/main.cd2e038f.css",
-    "main.js": "/react-redux-todo/static/js/main.5ef9efb1.js",
+    "main.js": "/react-redux-todo/static/js/main.a8265a59.js",
     "static/js/769.3b4bcf32.chunk.js": "/react-redux-todo/static/js/769.3b4bcf32.chunk.js",
     "static/js/574.ca421f66.chunk.js": "/react-redux-todo/static/js/574.ca421f66.chunk.js",
     "static/js/523.2c9589e6.chunk.js": "/react-redux-todo/static/js/523.2c9589e6.chunk.js",
@@ -12,7 +12,7 @@
     "static/media/home_page_planner.jpg": "/react-redux-todo/static/media/home_page_planner.ccf2384d093a93a1d51b.jpg",
     "index.html": "/react-redux-todo/index.html",
     "main.cd2e038f.css.map": "/react-redux-todo/static/css/main.cd2e038f.css.map",
-    "main.5ef9efb1.js.map": "/react-redux-todo/static/js/main.5ef9efb1.js.map",
+    "main.a8265a59.js.map": "/react-redux-todo/static/js/main.a8265a59.js.map",
     "769.3b4bcf32.chunk.js.map": "/react-redux-todo/static/js/769.3b4bcf32.chunk.js.map",
     "574.ca421f66.chunk.js.map": "/react-redux-todo/static/js/574.ca421f66.chunk.js.map",
     "523.2c9589e6.chunk.js.map": "/react-redux-todo/static/js/523.2c9589e6.chunk.js.map",
@@ -23,6 +23,6 @@
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.5ef9efb1.js"
+    "static/js/main.a8265a59.js"
   ]
 }
